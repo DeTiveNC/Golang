@@ -9,4 +9,4 @@ Distributed under the MIT License. See [LICENSE](https://github.com/DeTiveNC/Spr
 
 ## Authors
 
-- **Nicolas Cao** - _Comp Eng Student_ - [Nicolas Cao](https://github.com/detivenc) - _Built SpringProject_
+- **Nicolas Cao** - _Comp Eng Student_ - [Nicolas Cao](https://github.com/detivenc) 
