@@ -5,7 +5,7 @@
 
 ## License
 
-Distributed under the MIT License. See [LICENSE](https://github.com/DeTiveNC/SpringBootProjects/blob/main/LICENSE) for more information.
+Distributed under the MIT License. See [LICENSE](https://github.com/DeTiveNC/Golang/blob/main/LICENSE) for more information.
 
 ## Authors
 
