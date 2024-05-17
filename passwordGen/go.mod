@@ -1,6 +1,6 @@
 module github.com/detivenc/passwordGen
 
-go 1.22.0
+go 1.22.3
 
 require github.com/spf13/cobra v1.8.0
 
