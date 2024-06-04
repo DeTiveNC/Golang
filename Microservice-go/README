@@ -1,0 +1,9 @@
+## How to run the project
+
+- Clone the repository
+- Run go work init on all the folders
+- Change the .env.local to .env to use the environment variables
+
+## Clean the tmp from air
+
+- Run make clean
