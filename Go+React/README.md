@@ -1,4 +1,4 @@
-# Let's Go! React with Go Complete Fullstack App - TypeScript, React Query, MongoDB, ChakraUI
+# React with Go Complete Fullstack App - TypeScript, React Query, MongoDB, ChakraUI
 
 
 Some Features:
