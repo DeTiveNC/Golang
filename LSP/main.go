@@ -2,6 +2,8 @@ package main
 
 import (
 	"bufio"
+	"encoding/json"
+	"github.com/detivenc/lsp-go/lsp"
 	"github.com/detivenc/lsp-go/rpc"
 	"log"
 	"os"
@@ -17,13 +19,27 @@ func main() {
 	scanner.Split(rpc.Split)
 
 	for scanner.Scan() {
-		msg := scanner.Text()
-		HandleMessage(logger, msg)
+		msg := scanner.Bytes()
+		method, contents, err := rpc.DecodeMessage(msg)
+		if err != nil {
+			logger.Println(err)
+			continue
+		}
+		HandleMessage(logger, method, contents)
 	}
 }
 
-func HandleMessage(logger *log.Logger, msg any) {
-	logger.Println(msg)
+func HandleMessage(logger *log.Logger, method string, contents []byte) {
+	logger.Printf("Received msg with method: %s", method)
+
+	switch method {
+	case "initialize":
+		var request lsp.InitializeRequest
+		if err := json.Unmarshal(contents, &request); err != nil {
+			logger.Printf("Error unmarshalling initialize request: %s", err)
+		}
+		logger.Printf("Connected to: %s %s", request.Params.ClientInfo.Name, request.Params.ClientInfo.Version)
+	}
 }
 
 func GetLogger(filename string) *log.Logger {
