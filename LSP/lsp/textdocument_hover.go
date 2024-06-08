@@ -1,6 +1,6 @@
 package lsp
 
-// DefinitionRequest Hover represents a hover for a symbol at a specific location.
+// HoverRequest Hover represents a hover for a symbol at a specific location.
 type HoverRequest struct {
 	Request
 	Params HoverParams `json:"params"`

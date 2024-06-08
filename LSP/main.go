@@ -93,6 +93,30 @@ func HandleMessage(logger *log.Logger, writer io.Writer, state analysis.State, m
 
 		// Send the response
 		WriteResponse(writer, response)
+	case "textDocument/codeAction":
+		var request lsp.CodeActionRequest
+		if err := json.Unmarshal(contents, &request); err != nil {
+			logger.Printf("Error unmarshalling codeAction request: %s", err)
+			return
+		}
+
+		// Create a response
+		response := state.TextDocumentCodeAction(request.ID, request.Params.TextDocument.URI)
+
+		// Send the response
+		WriteResponse(writer, response)
+	case "textDocument/completion":
+		var request lsp.CompletionRequest
+		if err := json.Unmarshal(contents, &request); err != nil {
+			logger.Printf("Error unmarshalling completion request: %s", err)
+			return
+		}
+
+		// Create a response
+		response := state.TextDocumentCompletion(request.ID, request.Params.TextDocument.URI)
+
+		// Send the response
+		WriteResponse(writer, response)
 	}
 }
 
