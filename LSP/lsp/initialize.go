@@ -25,7 +25,12 @@ type InitializeResult struct {
 	ServerInfo   *ServerInfo        `json:"serverInfo"`
 }
 
-type ServerCapabilities struct{}
+type ServerCapabilities struct {
+	// Depends on the editor would be more fields
+	TextDocumentSync   int  `json:"textDocumentSync"`
+	HoverProvider      bool `json:"hoverProvider"`
+	DefinitionProvider bool `json:"definitionProvider"`
+}
 
 type ServerInfo struct {
 	Name    string `json:"name"`
@@ -39,7 +44,11 @@ func NewInitializeResponse(id int) InitializeResponse {
 			ID:  &id,
 		},
 		Result: InitializeResult{
-			Capabilities: ServerCapabilities{},
+			Capabilities: ServerCapabilities{
+				TextDocumentSync:   1,
+				HoverProvider:      true,
+				DefinitionProvider: true,
+			},
 			ServerInfo: &ServerInfo{
 				Name:    "lsp-go",
 				Version: "0.0.1",
