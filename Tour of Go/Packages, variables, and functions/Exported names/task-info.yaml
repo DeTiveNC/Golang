@@ -1,0 +1,24 @@
+type: output
+files:
+  - name: task.go
+    visible: true
+    placeholders:
+      - offset: 68
+        length: 7
+        placeholder_text: math.pi
+        initial_state:
+          length: 7
+          offset: 68
+        initialized_from_dependency: false
+        encrypted_possible_answer: eSSmjJpEnePeIUIzYyV+XA==
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: go.mod
+    visible: false
+    learner_created: false
+  - name: test/output.txt
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1
