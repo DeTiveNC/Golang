@@ -1,4 +1,4 @@
-package model
+package modelerr
 
 import "gorm.io/gorm"
 

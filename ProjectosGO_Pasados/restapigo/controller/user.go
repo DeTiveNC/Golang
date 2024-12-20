@@ -27,7 +27,10 @@ func PostUser(c *gin.Context) {
 		Password string
 	}
 
-	c.Bind(&body)
+	err := c.Bind(&body)
+	if err != nil {
+		return
+	}
 	// Create post
 	userCreate := model.User{Name: body.Name, Email: body.Email, Password: body.Password}
 	result := initializers.DB.Create(&userCreate)
@@ -71,7 +74,10 @@ func UpdateUser(c *gin.Context) {
 		Password string
 	}
 
-	c.Bind(&body)
+	err := c.Bind(&body)
+	if err != nil {
+		return
+	}
 	// Find the user
 	var userUpdate model.User
 
