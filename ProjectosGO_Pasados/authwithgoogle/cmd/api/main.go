@@ -8,10 +8,10 @@ import (
 func main() {
 
 	auth.NewAuth()
-	server := server.NewServer()
+	newServer := server.NewServer()
 
-	err := server.ListenAndServe()
+	err := newServer.ListenAndServe()
 	if err != nil {
-		panic("cannot start server")
+		panic("cannot start newServer")
 	}
 }

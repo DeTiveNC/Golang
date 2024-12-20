@@ -14,5 +14,8 @@ func init() {
 func main() {
 	router := gin.Default()
 	routes.UserRouter(router)
-	router.Run()
+	err := router.Run()
+	if err != nil {
+		return
+	}
 }

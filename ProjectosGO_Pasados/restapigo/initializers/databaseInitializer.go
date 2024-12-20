@@ -19,5 +19,8 @@ func InitializerDB() {
 		fmt.Println("Error connecting to the database:", err)
 		os.Exit(1)
 	}
-	DB.AutoMigrate(&model.User{})
+	err = DB.AutoMigrate(&model.User{})
+	if err != nil {
+		return
+	}
 }
