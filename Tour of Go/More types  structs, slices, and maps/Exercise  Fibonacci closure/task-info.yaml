@@ -5,15 +5,15 @@ files:
     visible: true
     placeholders:
       - offset: 134
-        length: 10
+        length: 63
         placeholder_text: /* TODO */
         initial_state:
           length: 10
           offset: 134
         initialized_from_dependency: false
         encrypted_possible_answer: ejZFv56JxRkkErHCHwMT/F4rjJfDV6tMAUWwn40UL50n99ImpzoJvuBbZZPeTN6NOMsSWDvjt67BlNTbGwp1LA==
-        selected: false
-        status: Unchecked
+        selected: true
+        status: Solved
     learner_created: false
   - name: go.mod
     visible: false
@@ -21,5 +21,8 @@ files:
   - name: test/output.txt
     visible: false
     learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Tue, 31 Dec 2024 12:08:56 UTC"
 record: -1
