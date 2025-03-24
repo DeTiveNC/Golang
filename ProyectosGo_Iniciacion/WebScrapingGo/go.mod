@@ -1,12 +1,11 @@
 module github.com/detivenc/webscraping-golang
 
 go 1.23
-
-toolchain go1.23.4
+toolchain go1.24.1
 
 require (
 	github.com/chromedp/chromedp v0.11.2
-	golang.org/x/net v0.33.0
+	golang.org/x/net v0.36.0
 )
 
 require (
@@ -17,5 +16,5 @@ require (
 	github.com/gobwas/ws v1.4.0 // indirect
 	github.com/josharian/intern v1.0.0 // indirect
 	github.com/mailru/easyjson v0.7.7 // indirect
-	golang.org/x/sys v0.28.0 // indirect
+	golang.org/x/sys v0.30.0 // indirect
 )
